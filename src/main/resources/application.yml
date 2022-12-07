@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: cart-client-service
+  jackson:
+    serialization:
+      indent-output: true
+server:
+  port: 8090
+      
+management:
+  endpoint:
+    health:
+      show-details: always      
+  endpoints:
+    web:
+      exposure:
+        include: "*"
