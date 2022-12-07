@@ -65,8 +65,8 @@ pipeline{
 		stage('ansible playbook'){
 		steps{
 		    script{
-		      echo "triggering k8s-sample-web-app-deployment job"
-		    build job: 'k8s-web-app-deployment', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
+		      echo "triggering k8s-spring-web-app-deployment job"
+		    build job: 'k8s-spring-web-app-deployment', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
 		    }
 		}
 	     }
