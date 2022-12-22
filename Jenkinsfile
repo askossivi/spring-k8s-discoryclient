@@ -18,6 +18,13 @@ pipeline{
         }
         
         stages{
+              stage('Build Maven App'){
+              steps{
+                  script{
+		   sh "mvn clean install"
+                       }
+                    }
+                 }
               stage('SonaQube Quality Gate Statuc Check'){
                   steps{
                       script{
@@ -34,13 +41,13 @@ pipeline{
                 }  
               }
 
-              stage('Build Maven App'){
-              steps{
-                  script{
-		   sh "mvn clean install"
-                       }
-                    }
-                 }
+//               stage('Build Maven App'){
+//               steps{
+//                   script{
+// 		   sh "mvn clean install"
+//                        }
+//                     }
+//                  }
 
 
               stage('Build Web App'){
