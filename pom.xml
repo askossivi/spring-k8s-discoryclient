@@ -20,6 +20,9 @@
         <spring.cloud.k8s.version>1.0.0.RELEASE</spring.cloud.k8s.version>
 		
 	</properties>
+	<properties>
+  		<sonar.java.binaries>target/classes</sonar.java.binaries>
+	</properties>
     <dependencyManagement>
         <dependencies>
             <dependency>
